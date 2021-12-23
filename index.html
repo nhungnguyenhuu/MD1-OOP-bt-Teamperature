@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class TemC {
+        constructor(c) {
+            this.c = c;
+        }
+        getC(){
+            return this.c;
+        }
+        setC(c){
+            this.c = c;
+        }
+        chuyenSangF(f){
+            f = (this.c*9/5+32);
+            return f;
+        }
+    }
+    class TemF{
+        constructor(f) {
+            this.f = f;
+        }
+
+        chuyenSangC(c){
+            c = (this.f-32)*5/9;
+            return c;
+        }
+    }
+    let temC1 = new TemC(25);
+    let temF1 = new TemF(22);
+    document.write(temC1.chuyenSangF()+ "<br>");
+    document.write(temF1.chuyenSangC());
+</script>
+
+</body>
+</html>
